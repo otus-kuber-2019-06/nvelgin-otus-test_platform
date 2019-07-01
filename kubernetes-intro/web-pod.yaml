@@ -8,6 +8,9 @@ spec:
   containers:
   - name: web
     image: avtandilko/web:1.0
+    volumeMounts:
+    - name: app
+      mountPath: /app
   initContainers:
   - name: html-gen
     image: busybox:1.31.0
